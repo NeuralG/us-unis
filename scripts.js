@@ -1,24 +1,25 @@
-fetch('https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=8MJM1h6lM4EYolu3CgqnydvwdJY5kr8I6OaigPeG')
-.then(data => data.json())
-.then(response => {
-    console.log(response)
+let unis = []
 
-    let uniNames = []
-    let uniPrices = []
+async function getFromAPI(page){
 
-    //20 den çok üni sorunununu çöz
-    //veriyi kısıtla napıyım only woman verisini 
-    //excele at
-    //rank bul
+    const apiKey = "8MJM1h6lM4EYolu3CgqnydvwdJY5kr8I6OaigPeG"
+    const fields = "latest.school.name" //take the datas that batu wants 
 
-    for (var i=0;i<20;i++){
-        let uniName = response.results[i].school.name
-        let uniPrice = response.results[i].latest.cost.attendance.academic_year
+    const data = await fetch(`https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${apiKey}&fields=${fields}&page=${page}`) 
+    return data.json()
+}
 
-        uniNames.push(uniName)
-        uniPrices.push(uniPrice)
+for(let i=0;i<2;i++){ //insert i<2 with i<page_count
 
-        console.log(`School name is: ${response.results[i].school.name} and the price is ${response.results[i].latest.cost.attendance.academic_year}`)
+    const data = await getFromAPI(i)
+
+    for(let a=0;a<20;a++){
+        unis.push(await data.results[a])
     }
     
-})
+}
+
+console.log(unis) //display them to DOM
+
+
+
