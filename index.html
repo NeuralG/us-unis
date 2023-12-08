@@ -8,8 +8,47 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <ul id="uni-list">
-        </ul>
+        <div id="menu">
+            <input id="uni-count" placeholder="Number of Universities here">
+            <p>Display Null Datas?</p>
+            <input id="displayNull" type="checkbox">
+            <button id="submit">Submit</button>
+
+            <!-- CODE ALL FILTERS RIGHT HERE
+            <input id="min_admission">
+            <input id="max_admission">
+            <input id="min_sat">
+            <input id="max_sat">
+            <input id="min_act">
+            <input id="max_act">
+            <input id="min_admission">
+            <input id="max_admission">
+            -->
+        </div>
+        <div id="uni-list">
+            <div class="uni">
+
+                <div class="uni-leftside">
+                    <h1><a target="_blank" href="https://www.rstc.edu">University Name</a></h1>
+                    <div class="uni-infos">
+                        <h3>Admission rate: xy%</h3>
+                        <h3>Median salary of graduates after 1 year: xxxxx</h3>
+                        <h3>Average SAT Score : xxxx</h3>
+                        <h3>Average ACT Score : xx</h3>
+                    </div>
+                </div>
+                <ul class="uni-costs">
+                    <br><br>
+                    <li id="poorest">0$-30000$ : xxxxx$</li>
+                    <li id="poor">30000$-48000$ : xxxxx$</li>
+                    <li id="mid">48000$-75000$ : xxxxx$</li>
+                    <li id="rich">75000$-110000$ : xxxxx$</li>
+                    <li id="richest">110000$+ : xxxxx$</li>
+                </ul>
+
+
+            </div>
+        </div>
         <script src="scripts.js" type="module"></script>
     </body>
 </html>

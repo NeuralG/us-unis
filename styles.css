@@ -1,7 +1,99 @@
-ul{
-    display: block;
+body,html{
+    padding: 0;
+    border: 0;
 }
-a{
-    font-size: 2.25rem;
-    display: block;
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+#menu{
+    background-color: gray;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    width: 80vw;
+    max-width: 1000px;
+}
+
+#menu > input,button{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+    height: 40px;
+}
+
+#menu > p {
+    margin: auto 0;
+    margin-left: 100px;
+
+}
+
+
+#uni-list{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    max-width: 1000px;
+}
+
+.uni {    
+    display: flex;
+    background-color: wheat;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.uni-leftside{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.uni-infos > h3 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0px;
+    margin-left: 10px;
+    text-align: center;
+    height: 100px;
+    background-color: aqua;
+    max-height: 50px;
+}
+
+.uni-infos{
+    display: flex;
+}
+
+.uni h3,ul{
+    display: inline;
+}
+
+.uni h1 {
+    color: blue;
+    text-align: center;
+    text-wrap: balance;
+    margin: 20px 1px;
+    
+}
+
+.uni h1 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.uni-costs{
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    background-color: aqua;
+    margin-left: 30px;
+    padding-right: 10px;
+}
+
